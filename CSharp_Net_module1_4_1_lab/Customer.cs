@@ -22,7 +22,7 @@ namespace CSharp_Net_module1_4_1_lab
         // 2 - GoodsInfoEventArgs type
         public void GotNewGoods(object type, GoodsInfoEventArgs type2)
         {
-
+            Console.WriteLine("have a new goods!");
         }
 
     }

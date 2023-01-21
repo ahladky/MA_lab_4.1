@@ -9,7 +9,7 @@ namespace CSharp_Net_module1_4_1_lab
     class OnlineShop
     {
         // 4) declare event of type EventHandler<GoodsInfoEventArgs>
-
+        public string GoodsName;
         public event EventHandler<GoodsInfoEventArgs> NewGoodsInfo;
 
         public void NewGoods(string goodsName)
@@ -17,9 +17,11 @@ namespace CSharp_Net_module1_4_1_lab
             if (NewGoodsInfo != null)
             {
                 NewGoodsInfo(this, new GoodsInfoEventArgs(goodsName));
+                GoodsName = goodsName;
             }
 
         }
+        
         // 5) declare method NewGoods for event initiation
         // use parameter string to get GoodsName
         
